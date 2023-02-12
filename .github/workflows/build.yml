@@ -9,6 +9,7 @@ on:
   pull_request:
     branches: [master]
 
+jobs:
       # Increase -N suffix here to force full rebuild after changes
   macos:
     runs-on: ${{ matrix.os }}
@@ -17,7 +18,8 @@ on:
         cc:
           - "clang"
         os:
-          - "macos-13"
+          - "macos-11"
+          - "macos-12"
     steps:
       - uses: actions/checkout@v3
 
